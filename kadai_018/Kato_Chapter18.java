@@ -3,22 +3,23 @@ package kadai_018;
 public abstract class Kato_Chapter18 {
 
 	//フィールド
-	public String familyName = "";
+	public String familyName = "加藤";
 	public String givenName = "";
-	public String address = "";
+	public String address = "東京都中野区〇×";
 	
 	//共通の紹介を出力する
 	public void commonIntroduce() {
-		System.out.println("名前は" + familyName + "" + givenName + "です");
-		System.out.println("住所は" + address + "です");
+		System.out.println("名前は" + this.familyName + this.givenName + "です");
+		System.out.println("住所は" + this.address + "です");
 	}
 	
-	//個別の紹介を出力する（サブクラス）
+	//個別の紹介を出力する（抽象クラス）
 	public abstract void eachIntroduce();
 	
 	//紹介を実行する
 	public void execIntroduce() {
 		commonIntroduce();
 		eachIntroduce();
+		System.out.println();
 	}
 }
